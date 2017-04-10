@@ -469,20 +469,329 @@ footer span{
     padding-bottom:80px;
 }
 .news_cards .cards_list .card{
+    position: relative;
     width:33.333333%;
     padding:10px;
     box-sizing: border-box;
+    transition: all 0.1s linear;
 }
 .news_cards .cards_list .card img{
+    width:100%;
+}
+/* 技术页banner */
+.science_banner{
+    position: relative;
+    height:285px;
+    top:0;
+}
+.science_banner .intro_img{
+    width:100%;
+    position: absolute;
+    overflow:hidden;
+    height:285px;
+    text-align:center;
+}
+.science_banner .intro_img img{
+    height:100%;
+    width:auto;
+    position:relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.science_banner .science_intro{
+    position: absolute;
+    z-index: 2;   
+    text-align: center;       
+}
+.science_banner .science_intro .intro{
+    line-height:40px;
+    color:#fff;
+    font-size:20px;
+    margin-top:100px;
+    letter-spacing: 2px;
+}
+.science_banner .science_intro .line{
+    width:140px;
+    height:2px;
+    background:#59baea;
+    margin:50px auto 0;
+}
+/* 技术页面卡片 */
+.science_cards {
+    position: relative;
+    top:0;
+}
+.science_cards .cards_list{
+    display:flex;
+    flex-direction: row;
+    padding-top:90px;
+    padding-bottom:90px;
+}
+.science_cards .cards_list .card{
+    width:33.3333333%;
+    padding:10px 40px;
+    box-sizing: border-box;
+}
+.science_cards .cards_list .card div{
+    text-align: center;
+    margin-bottom:30px;
+}
+.science_cards .cards_list .science1 img{
+    width:82px;
+    height:89px;
+}
+.science_cards .cards_list .science2 img{
+    width:88px;
+    height:87px;
+}
+.science_cards .cards_list .science3 img{
+    width:102px;
+    height:91px;
+}
+.science_cards .cards_list .card p{
+    font-size:14px;
+    line-height:20px;
+    width:90%;
+    margin:0 auto;
+    text-align: justify;
+}
+/* 技术页面介绍 */
+.science_detail{
+    position: relative;
+    top:0;
+}
+.science_detail .intro{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-bottom:90px;
+}
+.science_detail .intro p{
+    width:50%;
+    box-sizing: border-box;
+    padding:20px 30px;
+    font-size:14px;
+    line-height:20px;
+    margin:0 auto;
+    text-align: justify;
+}
+.science_detail .intro p span{
+    color:#59baea;
+    font-size:16px;
+    line-height:20px;
+}
+/* 技术页面科研论文部分 */
+.science_article{
+    position: relative;
+    top:0;
+}
+.science_article .title{
+    margin-bottom:30px;
+}
+.science_article .title h1{
+    text-align: center;
+    height:50px;
+    line-height:48px;
+    box-sizing: border-box;
+    color:#59baea;
+    letter-spacing: 2px;
+    margin:0 auto;
+}
+.science_article .title .line{
+    background: #d8d8d8;
+    height:2px;
+    width:200px;
+    margin:0 auto;
+}
+.science_article .article{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-top:20px;
+}
+.science_article .article .article_left,.science_article .article .article_right{
+    width:49%;
+    box-sizing: border-box;
+    padding:10px 20px;
+}
+.science_article .article h3{
+    text-align: center;
+    font-size:18px;
+    color:#afe5ff;
+    letter-spacing: 1px;
+    margin:10px auto 30px;
+    font-family: Verdana-bold;
+}
+.science_article .article .left1,.science_article .article .left2,
+.science_article .article .right1,.science_article .article .right2,
+.science_article .article .right3{
+    margin-bottom:20px;
+    padding:10px 20px;
+}
+.science_article .article .msg{
+    text-align: justify;
+    font-size:14px;
+    font-family: Verdana;
+    line-height:20px;
+    color:#30343c;
+}
+.science_article .article .time{
+    text-align: right;
+    font-size:14px;
+    font-family: Verdana;
+    line-height:20px;
+    color:#30343c;
+    margin:10px auto 25px;
+}
+.science_article .article .article_center{
+    width:2%;
+    box-sizing: border-box;
+    margin-top:20px;
+    margin-bottom:40px;
+    text-align: center;
+    background:url('../img/line.png') repeat-Y;
+    background-size:contain;
+    background-position: center center;
+}
+.science_article .icon{
+    width:100%;
+    text-align: center;
+    padding:30px 0 80px;
+}
+.science_article .icon img{
+    width:108px;
+}
+/* 团队banner */
+.team_banner{
+    position: relative;
+    height:285px;
+    top:0;
+}
+.team_banner .intro_img{
+    width:100%;
+    position: absolute;
+    overflow:hidden;
+    height:285px;
+    text-align:center;
+}
+.team_banner .intro_img img{
+    height:100%;
+    width:auto;
+    position:relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.team_banner .team_intro{
+    position: absolute;
+    z-index: 2;
+    color:#fff;
+    text-align: center;
+    height:100%;
+}
+.team_banner .icon{
+    margin-top:70px;
+    text-align: center;
+}
+.team_banner .icon img{
+    width:64px;
+    height:55px;
+}
+.team_banner .name{
+    display:flex;
+    flex-direction: row;
+    margin:20px 0 30px;
+    
+}
+.team_banner .name hr{
+    width:40%;
+    vertical-align: middle;
+    margin-top:20px;
+}
+.team_banner .name div{
+    width:20%;
+    text-align: center;
+    height:40px;
+    line-height:40px;
+    font-size:24px;
+    color:#fff;
+    letter-spacing: 2px;
+}
+.team_banner .intro{
+    text-align: center;
+    font-size: 20px;
+    color:#fff;
+    line-height:28px;
+    letter-spacing: 2px;
+}
+/* 团队卡片部分 */
+.team_cards{
+    position: relative;
+    top:0;
+    margin-top:80px;
+}
+.team_cards .list1{
+    display:flex;
+    width:60%;
+    margin:0 auto 50px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    padding:30px;
+}
+.team_cards .list1 .card ,.team_cards .list2 .card{
+    width:50%;
+    position: relative;
+    cursor: pointer;
+    font-size:0;
+    box-sizing: border-box;
+}
+.team_cards .list2{
+    width:80%;
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    padding:20px;
+    margin:0 auto 100px;
+}
+.team_cards .card .shadow{
+    background:#000;
+    opacity: 0.4;
+    position: absolute;
+    z-index: 2;
+    display:block;
+    width:100%;
+    height:100%;
+    left:0;
+    top:0;
+    -webkit-transition: opacity 500ms cubic-bezier(0.000, 0.995, 0.990, 1.000);
+       -moz-transition: opacity 500ms cubic-bezier(0.000, 0.995, 0.990, 1.000);
+        -ms-transition: opacity 500ms cubic-bezier(0.000, 0.995, 0.990, 1.000);
+         -o-transition: opacity 500ms cubic-bezier(0.000, 0.995, 0.990, 1.000);
+            transition: opacity 500ms cubic-bezier(0.000, 0.995, 0.990, 1.000);
+}
+.team_cards .card:hover .shadow{
+    opacity:0;
+}
+.team_cards .card img{
     width:100%;
 }
 @media screen and (max-width:1400px)and (min-width:710px){
     .about_1 .detail,.about_2 .detail{ 
         padding:10px 20px;   
     }
+    .science_cards .cards_list .card{
+        padding:10px 20px;
+    }
 }
 @media screen and (max-width:1200px)and (min-width:1035px){
     .news_cards .cards_list{
+        padding-left:20px;
+        padding-right:20px;
+    }
+}
+@media screen and (max-width:1110px){
+    .science_banner .science_intro{
         padding-left:20px;
         padding-right:20px;
     }
@@ -635,5 +944,92 @@ footer span{
     .news_cards .cards_list .card{
         width:100%;
         padding:0;
+    }
+    .science_banner{
+        top:54px;
+    }
+    .science_banner .science_intro .intro{
+        margin-top:80px;
+    }
+    .science_banner .science_intro .line{
+        width:100%;
+    }
+    .science_cards{
+        top:54px;
+    }
+    .science_cards .cards_list{
+        display:block;
+        padding-top:50px;
+        padding-bottom:50px;
+    }
+    .science_cards .cards_list .card{
+        width:100%;
+        padding:20px 10px;
+    }
+    .science_detail{
+        top:54px;
+    }
+    .science_detail .intro{
+        padding-bottom: 50px;
+    }
+    .science_detail .intro p{
+        width:100%;
+        padding:10px 20px 20px;
+    }
+    .science_article{
+        top:54px;
+    }
+    .science_article .title .line{
+        width:100%;
+        margin-top:20px;
+    }
+    .science_article .article .article_center{
+        width:0;
+    }
+    .science_article .article .article_left,.science_article .article .article_right{
+        width:100%;
+        padding-left:5px;
+        padding-right:5px;
+    }
+    .science_article .title{
+        margin-bottom:0;
+    }
+    .science_article .article .left1,.science_article .article .left2,
+    .science_article .article .right1,.science_article .article .right2,
+    .science_article .article .right3{
+        margin-bottom:0px;
+        padding:10px 0;
+    }
+    .team_banner{
+        top:54px;
+        height:385px;
+    }
+    .team_banner .intro_img{
+        height:385px;
+    }
+    .team_banner .name{
+        display:block;
+    }
+    .team_banner .name hr{
+        width:100%;
+        margin-top:8px;
+    }
+    .team_banner .name div{
+        width:100%;
+        height:80px;
+        line-height:80px;
+        font-size:20px;
+    }
+    .team_banner .intro{
+        font-size: 16px;
+    }
+    .team_cards .list1{
+        display:flex;
+        width:66.66666%;
+        margin:0 auto 80px;
+        flex-direction: row;
+        flex-wrap: wrap;
+        box-sizing: border-box;
+        padding:20px;
     }
 }
