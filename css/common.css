@@ -1023,13 +1023,33 @@ footer span{
     .team_banner .intro{
         font-size: 16px;
     }
+    .team_cards{
+        top:54px;
+        margin-top:30px;
+    }
     .team_cards .list1{
+        width:80%;
+        margin:0 auto 0;
+        flex-direction: row;
+        flex-wrap: wrap;
+        box-sizing: border-box;
+        padding:30px;
+    }
+    .team_cards .list1 .card ,.team_cards .list2 .card{
+        width:90%;
+        position: relative;
+        cursor: pointer;
+        font-size:0;
+        box-sizing: border-box;
+        margin:0 auto 30px;
+    }
+    .team_cards .list2{
+        width:100%;
         display:flex;
-        width:66.66666%;
-        margin:0 auto 80px;
         flex-direction: row;
         flex-wrap: wrap;
         box-sizing: border-box;
         padding:20px;
+        margin:0 auto 50px;
     }
 }
