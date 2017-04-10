@@ -1052,4 +1052,7 @@ footer span{
         padding:20px;
         margin:0 auto 50px;
     }
+    .team_cards .card .shadow{
+        opacity:0;
+    }
 }
