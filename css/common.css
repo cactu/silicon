@@ -120,13 +120,18 @@ header .tab li a{
     color:#59baea;
     font-size:16px;
 }
-header .tab span{
+header .tab p{
     float:left;
     line-height:70px;
     height:70px;
     font-size:14px;
+    margin-top:0;
+    margin-bottom:0; 
 }
-header .tab span a{
+header .tab p a{
+    color:#ccc;
+}
+header .tab p a span.active{
     color:#59baea;
 }
 header .tab_icon{
@@ -173,26 +178,31 @@ header .tab_icon img{
     text-align: left;
     font-size:16px;    
 }
-.menu .tab li.active a{
-    color:#59baea;
-}
 .menu .tab li a{
-    color:#ccc;
+    color:#59baea;
     display:inline-block;
     width:100%;
     height:100%;
 }
-.menu .tab span{
+.menu .tab p{
     display: inline-block;
     width:100%;
     height:40px;
-    line-height:40px;    
+    line-height:40px;
+    margin-top:0;
+    margin-bottom:0;    
 }
-.menu .tab span a{
+.menu .tab p a{
     color:#ccc;
     display:inline-block;
     width:100%;
     height:100%;
+}
+.menu .tab p a span{
+    
+}
+.menu .tab p a span.active{
+    color:#59baea;
 }
 .menu .del{
     width:20%;
@@ -731,15 +741,31 @@ footer span{
 }
 .team_cards .list1{
     display:flex;
-    width:60%;
+    width:70%;
     margin:0 auto 50px;
     flex-direction: row;
     flex-wrap: wrap;
     box-sizing: border-box;
     padding:30px;
 }
-.team_cards .list1 .card ,.team_cards .list2 .card{
+.team_cards .list1 .title ,.team_cards .list2 .title{
+    width:100%;
+    text-align: center;
+    color:#59baea;
+    font-size:34px;
+    line-height:48px;
+    height:48px;
+    margin-bottom:50px;
+}
+.team_cards .list1 .card {
     width:50%;
+    position: relative;
+    cursor: pointer;
+    font-size:0;
+    box-sizing: border-box;
+}
+.team_cards .list2 .card{
+    width:33.3333%;
     position: relative;
     cursor: pointer;
     font-size:0;
@@ -1044,12 +1070,12 @@ footer span{
         margin:0 auto 30px;
     }
     .team_cards .list2{
-        width:100%;
+        width:80%;
         display:flex;
         flex-direction: row;
         flex-wrap: wrap;
         box-sizing: border-box;
-        padding:20px;
+        padding:30px;
         margin:0 auto 50px;
     }
     .team_cards .card .shadow{
