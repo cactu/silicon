@@ -741,43 +741,34 @@ footer span{
 }
 .team_cards .list1{
     display:flex;
-    width:70%;
-    margin:0 auto 50px;
+    width:100%;
+    margin:0 auto;
     flex-direction: row;
     flex-wrap: wrap;
     box-sizing: border-box;
-    padding:30px;
-}
-.team_cards .list1 .title ,.team_cards .list2 .title{
-    width:100%;
-    text-align: center;
-    color:#59baea;
-    font-size:34px;
-    line-height:48px;
-    height:48px;
-    margin-bottom:50px;
+    padding:0 30px;
 }
 .team_cards .list1 .card {
-    width:50%;
-    position: relative;
-    cursor: pointer;
-    font-size:0;
-    box-sizing: border-box;
-}
-.team_cards .list2 .card{
     width:33.3333%;
     position: relative;
     cursor: pointer;
     font-size:0;
     box-sizing: border-box;
 }
+.team_cards .list2 .card{
+    width:50%;
+    position: relative;
+    cursor: pointer;
+    font-size:0;
+    box-sizing: border-box;
+}
 .team_cards .list2{
-    width:80%;
+    width:66.6666%;
     display:flex;
     flex-direction: row;
     flex-wrap: wrap;
     box-sizing: border-box;
-    padding:20px;
+    padding:0 20px;
     margin:0 auto 100px;
 }
 .team_cards .card .shadow{
