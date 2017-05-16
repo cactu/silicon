@@ -1,11 +1,7 @@
 $(function(){
 	//判断移动端还是pc端点击事件
-    if ('ontouchend' in window) {
-        var click = 'touchend';
-    } else {
-        var click = 'click';
-    }
-
+    var click = navigator.userAgent.match(/(iPhone|iPod|Android|iOS)/i)?'touchend':'click';
+    
     $('header .tab_icon').on(click,function(){
     	$('.menu').addClass('open');
     	$('.wrap').addClass('open');
@@ -16,5 +12,22 @@ $(function(){
     	$('.wrap').removeClass('open');
     	e.preventDefault();
     	$('body').css({"overflow-y":'auto'})
+    })
+    
+    $('.team_cards .card ').on(click,function(){
+        
+        //console.log(111)
+        $(this).find('.card_detail').css({'display':'block'})
+        //e.preventDefault();
+
+        $('body').css({"overflow-y":'hidden'})
+    })
+    $('.card_detail .detail .del ').on(click,function(){
+        
+        //console.log(222)
+        $(this).parents('.card_detail').css({'display':'none'})
+        $('body').css({"overflow-y":'auto'})
+        return false;
+        
     })
 })
