@@ -791,11 +791,10 @@ footer span a{
     font-size:24px;
 }
 .card_detail .detail .msg{
-        width:auto;
-        
+        float:left;
     }
 .card_detail .detail img{
-    width:300px;
+    width:150px;
     float:left;
     margin-right:20px;
     margin-bottom:20px;
@@ -804,6 +803,14 @@ footer span a{
     margin:0;
     line-height:24px;
     letter-spacing: 1px;
+    
+}
+.card_detail .detail p.art{
+    float:left;
+    width:100%;
+}
+.card_detail .detail h2{
+    margin-top:60px;
 }
 .card_detail .detail p.intro{
     margin-bottom:30px;
@@ -907,6 +914,12 @@ footer span a{
         width:100%; 
         margin:10px 0;
         padding:10px 20px;   
+    }
+    .card_detail .detail img{
+        width:80%;
+        float:left;
+        margin-right:20px;
+        margin-bottom:20px;
     }
 }
 @media screen and (max-width:374px){
@@ -1159,8 +1172,8 @@ footer span a{
         opacity:0;
     }
     .card_detail .detail{
-        margin-left: 10px;
-        margin-right: 10px;
+        margin-left: 20px;
+        margin-right: 20px;
         max-height: 98%;
         padding: 10px 10px 0;
         border-bottom: 10px solid transparent;

@@ -14,7 +14,7 @@ $(function(){
     	$('body').css({"overflow-y":'auto'})
     })
     
-    $('.team_cards .card').on(click,function(){
+    $('.team_cards .card').on('click',function(){
         
         //console.log(1111)
         $(this).find('.card_detail').css({'display':'block'})
@@ -24,16 +24,6 @@ $(function(){
         //e.preventDefault();
         //return false;
     })
-    /*window.onscroll=function(){
-        
-        console.log(1111)
-        $('.team_cards .card').off(click,function(){
-            $(this).find('.card_detail').css({'display':'block'})
-        
-
-            $('body').css({"overflow-y":'hidden'})
-        })
-    }*/
     $('.card_detail .detail .del ').on(click,function(){
         
         //console.log(222)
