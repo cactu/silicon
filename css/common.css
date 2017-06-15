@@ -842,7 +842,7 @@ footer span a{
 }
 .team_cards .card .shadow{
     background:#000;
-    opacity: 0.4;
+    opacity: 0.3;
     position: absolute;
     z-index: 2;
     display:block;
