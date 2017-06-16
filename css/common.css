@@ -771,10 +771,10 @@ footer span a{
     display: inline-block;
     overflow-y: auto;
     overflow-x:hidden;
-    padding: 25px 25px 0;
+    padding: 60px 60px 0;
     border-bottom: 25px solid transparent;
-    margin-left: 10%;
-    margin-right: 10%;
+    margin-left: 20%;
+    margin-right: 20%;
     max-height: 95%;
     background: #fff;
     cursor: auto;
@@ -794,7 +794,7 @@ footer span a{
         float:left;
     }
 .card_detail .detail img{
-    width:200px;
+    width:260px;
     float:left;
     margin-right:20px;
     margin-bottom:20px;
@@ -805,6 +805,10 @@ footer span a{
     letter-spacing: 1px;
     
 }
+.card_detail .detail p.pos{
+    font-size:20px;
+    margin-bottom:5px;
+}
 .card_detail .detail p.art{
     float:left;
     width:100%;
@@ -812,10 +816,12 @@ footer span a{
     text-align: justify;
 }
 .card_detail .detail h2{
-    margin-top:110px;
+    margin-top:100px;
+    font-size:40px;
 }
 .card_detail .detail p.intro{
     margin-bottom:30px;
+    font-size:20px;
 }
 .team_cards .list1{
     display:flex;
@@ -1174,8 +1180,8 @@ footer span a{
         opacity:0;
     }
     .card_detail .detail{
-        margin-left: 20px;
-        margin-right: 20px;
+        margin-left: 8px;
+        margin-right: 8px;
         max-height: 98%;
         padding: 10px 20px 30px 20px;
         border-bottom: 10px solid transparent;
