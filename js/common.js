@@ -33,5 +33,11 @@ $(function(){
         
     })
 
-    
+    $.ajax({
+        type:'get',
+        url:'./sdk/jssdk.php',
+        success:function(rs){
+            console.log(rs);
+        }
+    })
 })
