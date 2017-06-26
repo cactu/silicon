@@ -116,6 +116,6 @@ $appSecret = '97b9ca867ce04dbee22661dde3ceb3f8';
 
 $jssdk = new JSSDK($appId,$appSecret);
 $arr = $jssdk->getSignPackage();
-$arr = json_encode($arr);
-return $arr;
+echo json_encode($arr);
+
 
