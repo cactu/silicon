@@ -32,12 +32,38 @@ $(function(){
         return false;
         
     })
-
+    //console.log(222);
     $.ajax({
         type:'get',
         url:'./sdk/jssdk.php',
         success:function(rs){
-            console.log(rs);
+            var rs = $.parseJSON(rs);
+            //console.log(rs);
+            wx.config({
+                debug: false, 
+                appId: rs.appId, 
+                timestamp: rs.timestamp, 
+                nonceStr: rs.nonceStr, 
+                signature: rs.signature,
+                jsApiList: ['onMenuShareTimeline', 'onMenuShareAppMessage'] 
+            });
+
+            wx.ready(function(){
+                // 获取“分享到朋友圈”按钮点击状态及自定义分享内容接口
+                wx.onMenuShareTimeline({
+                    title: ' ', 
+                    link:" ",
+                    imgUrl: "../img/share_logo.png" 
+                });
+                // 获取“分享给朋友”按钮点击状态及自定义分享内容接口
+                wx.onMenuShareAppMessage({
+                    title: ' ', 
+                    desc: '集成药物计算研发公司',
+                    link:" ",
+                    imgUrl: "../img/share_logo.png", 
+                    type: 'link', 
+                });
+            })
         }
     })
 })
