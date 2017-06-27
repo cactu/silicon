@@ -164,7 +164,7 @@
 	
 	<script>
 	function WeChat(url,title,img,desc){
-     	$.get("ajax_getconfig.php",{url:window.location.href},function(data) {
+     	$.get("./ajax_getconfig.php",{url:window.location.href},function(data) {
         
         	wx.config(data);
         	wx.ready(function () {
