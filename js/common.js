@@ -49,24 +49,43 @@ $(function(){
                 jsApiList: ['onMenuShareTimeline', 'onMenuShareAppMessage'] 
             });
             */
+            console.log(rs);
             wx.config(rs);
             
             wx.ready(function(){
                 // 获取“分享到朋友圈”按钮点击状态及自定义分享内容接口
-                wx.onMenuShareTimeline({
-                    title: '', 
-                    link:" ",
-                    imgUrl: "../img/share_logo.png" 
+                wx.onMenuShareTimeline({  //例如分享到朋友圈的API  
+                  title: '', // 分享标题
+                  link: '', // 分享链接
+                  imgUrl: '', // 分享图标
+                  success: function () {
+                    // 用户确认分享后执行的回调函数
+                  },
+                  cancel: function () {
+                    // 用户取消分享后执行的回调函数
+                  }
                 });
+
                 // 获取“分享给朋友”按钮点击状态及自定义分享内容接口
                 wx.onMenuShareAppMessage({
-                    title: '硅康医药', 
-                    desc: '集成药物计算研发公司',
-                    link:"http://silicontx.cn",
-                    imgUrl: "../img/share_logo.png", 
-                    type: 'link' 
+                  title: '11', // 分享标题
+                  desc: '22', // 分享描述
+                  langink: 'http://silicontx.cn', // 分享链接，该链接域名或路径必须与当前页面对应的公众号JS安全域名一致
+                  imgUrl: 'http://silicontx.cn/img/share_logo.png', // 分享图标
+                  type: 'link', // 分享类型,music、video或link，不填默认为link
+                  dataUrl: '', // 如果type是music或video，则要提供数据链接，默认为空
+                  success: function () { 
+                      // 用户确认分享后执行的回调函数
+                  },
+                  cancel: function () { 
+                    // 用户取消分享后执行的回调函数
+                  }
                 });
-            })
+            });
+
+            wx.error(function (res) {
+                alert(res.errMsg);  //打印错误消息。及把 debug:false,设置为debug:ture就可以直接在网页上看到弹出的错误提示
+            });
         }
     })
 })
