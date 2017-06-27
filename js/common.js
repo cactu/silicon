@@ -37,20 +37,18 @@ $(function(){
         type:'get',
         url:'./sdk/jssdk.php',
         success:function(rs){
-            /*
+           
             var rs = $.parseJSON(rs);
-            console.log(rs.appId);
+            //console.log(rs.appId);
             wx.config({
-                debug: false, 
+                debug: true, 
                 appId: rs.appId, 
                 timestamp: rs.timestamp, 
                 nonceStr: rs.nonceStr, 
                 signature: rs.signature,
                 jsApiList: ['onMenuShareTimeline', 'onMenuShareAppMessage'] 
             });
-            */
-            console.log(rs);
-            wx.config(rs);
+            
             
             wx.ready(function(){
                 // 获取“分享到朋友圈”按钮点击状态及自定义分享内容接口
@@ -68,9 +66,9 @@ $(function(){
 
                 // 获取“分享给朋友”按钮点击状态及自定义分享内容接口
                 wx.onMenuShareAppMessage({
-                  title: '11', // 分享标题
-                  desc: '22', // 分享描述
-                  langink: 'http://silicontx.cn', // 分享链接，该链接域名或路径必须与当前页面对应的公众号JS安全域名一致
+                  title: '硅康医药', // 分享标题
+                  desc: '我们致力于攻克生物化学难题,以解锁新一代疗法', // 分享描述
+                  langink: rs.url, // 分享链接，该链接域名或路径必须与当前页面对应的公众号JS安全域名一致
                   imgUrl: 'http://silicontx.cn/img/share_logo.png', // 分享图标
                   type: 'link', // 分享类型,music、video或link，不填默认为link
                   dataUrl: '', // 如果type是music或video，则要提供数据链接，默认为空
