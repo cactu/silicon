@@ -61,7 +61,7 @@ $(function(){
                     desc: '集成药物计算研发公司',
                     link:"http://silicontx.cn/",
                     imgUrl: "../img/share_logo.png", 
-                    type: 'link' 
+                    type: 'link'     
                 });
             })
         }
