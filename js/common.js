@@ -41,7 +41,7 @@ $(function(){
             var rs = $.parseJSON(rs);
             //console.log(rs.appId);
             wx.config({
-                debug: true, 
+                debug: false, 
                 appId: rs.appId, 
                 timestamp: rs.timestamp, 
                 nonceStr: rs.nonceStr, 
