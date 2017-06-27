@@ -167,7 +167,7 @@ $signPackage = $jssdk->GetSignPackage();
 		</footer>
 	</div>
 	
-	<script type="text/javascript" src='js/common.js'></script>
+	
 	<script>
 		wx.config({
 	      	debug: true,
