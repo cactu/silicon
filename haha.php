@@ -168,7 +168,7 @@ $signPackage = $jssdk->GetSignPackage();
 	</div>
 	
 	<script type="text/javascript" src='js/common.js'></script>
-	<script type="text/javascript">
+	<script>
 		wx.config({
 	      	debug: true,
 	      	appId: '<?php echo $signPackage["appId"];?>',
