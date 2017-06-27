@@ -37,8 +37,9 @@ $(function(){
         type:'get',
         url:'./sdk/jssdk.php',
         success:function(rs){
+            /*
             var rs = $.parseJSON(rs);
-            //console.log(rs.appId);
+            console.log(rs.appId);
             wx.config({
                 debug: false, 
                 appId: rs.appId, 
@@ -47,7 +48,9 @@ $(function(){
                 signature: rs.signature,
                 jsApiList: ['onMenuShareTimeline', 'onMenuShareAppMessage'] 
             });
-
+            */
+            wx.config(rs);
+            
             wx.ready(function(){
                 // 获取“分享到朋友圈”按钮点击状态及自定义分享内容接口
                 wx.onMenuShareTimeline({
@@ -59,7 +62,7 @@ $(function(){
                 wx.onMenuShareAppMessage({
                     title: '硅康医药', 
                     desc: '集成药物计算研发公司',
-                    link:"http://silicontx.cn/",
+                    link:"http://silicontx.cn",
                     imgUrl: "../img/share_logo.png", 
                     type: 'link' 
                 });

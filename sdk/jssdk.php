@@ -3,7 +3,7 @@ class JSSDK {
   private $appId;
   private $appSecret;
 
-  public function __construct($appId, $appSecret) {
+  public function __construct($appId,$appSecret) {
     $this->appId = $appId;
     $this->appSecret = $appSecret;
   }
@@ -116,6 +116,8 @@ $appSecret = '97b9ca867ce04dbee22661dde3ceb3f8';
 
 $jssdk = new JSSDK($appId,$appSecret);
 $arr = $jssdk->getSignPackage();
+$arr['debug'] = true;
+$arr['jsApiList'] = array('onMenuShareTimeline','onMenuShareAppMessage');
 echo json_encode($arr);
 
 
