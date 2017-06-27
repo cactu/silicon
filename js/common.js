@@ -40,10 +40,10 @@ $(function(){
             var rs = $.parseJSON(rs);
             wx.config({
                 debug: true,
-                appId: '<?php echo $signPackage["appId"];?>',
-                trueimestamp: <?php echo $signPackage["timestamp"];?>,
-                nonceStr: '<?php echo $signPackage["nonceStr"];?>',
-                signature: '<?php echo $signPackage["signature"];?>',
+                appId: rs.appId, 
+                timestamp: rs.timestamp, 
+                nonceStr: rs.nonceStr, 
+                signature: rs.signature,
                 jsApiList: [
                     'checkJsApi',  //判断当前客户端版本是否支持指定JS接口
                     'onMenuShareTimeline', //分享给好友
