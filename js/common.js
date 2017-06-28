@@ -66,7 +66,7 @@ $(function(){
 
                 // 获取“分享给朋友”按钮点击状态及自定义分享内容接口
                 wx.onMenuShareAppMessage({
-                  title: '硅康医药', // 分享标题
+                  title: '', // 分享标题
                   desc: '用最精准的计算方法突破传统研发瓶颈\n为人类的重大疾病寻找新一代创新药物', // 分享描述
                   langink: rs.url, // 分享链接，该链接域名或路径必须与当前页面对应的公众号JS安全域名一致
                   imgUrl: 'http://silicontx.cn/img/share_logo.png', // 分享图标
