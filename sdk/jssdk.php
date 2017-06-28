@@ -2,18 +2,21 @@
 class JSSDK {
   private $appId;
   private $appSecret;
+  private $url;
 
-  public function __construct($appId, $appSecret) {
+  public function __construct($appId,$appSecret,$url) {
     $this->appId = $appId;
     $this->appSecret = $appSecret;
+    $this->url = $url;
   }
 
   public function getSignPackage() {
     $jsapiTicket = $this->getJsApiTicket();
 
     // 注意 URL 一定要动态获取，不能 hardcode.
-    $protocol = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off' || $_SERVER['SERVER_PORT'] == 443) ? "https://" : "http://";
-    $url = "$protocol$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+    //$protocol = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off' || $_SERVER['SERVER_PORT'] == 443) ? "https://" : "http://";
+    //$url = "$protocol$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+    $url = $this->url;
 
     $timestamp = time();
     $nonceStr = $this->createNonceStr();
@@ -113,8 +116,8 @@ class JSSDK {
 
 $appId = 'wx36f784e8c13faff0';
 $appSecret = '97b9ca867ce04dbee22661dde3ceb3f8';
-
-$jssdk = new JSSDK($appId,$appSecret);
+$url = $_SERVER['HTTP_REFERER'];
+$jssdk = new JSSDK($appId,$appSecret,$url);
 $arr = $jssdk->getSignPackage();
 echo json_encode($arr);
 
